@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   
 
+  ActiveAdmin.routes(self)
+  devise_for :users, ActiveAdmin::Devise.config
+  
   get 'projects/new'
 
   get 'sessions/new'
@@ -9,7 +12,7 @@ Rails.application.routes.draw do
   root to: 'pages#index'
   
   get '/secret', to: 'pages#secret', as: :secret
-  devise_for :users
+  
 
 
   
