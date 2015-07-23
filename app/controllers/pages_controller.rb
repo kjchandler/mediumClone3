@@ -1,4 +1,4 @@
 class PagesController < ApplicationController
-  def new
-  end
+	before_action :authenticate_user!, only: [:secret]
+
 end
