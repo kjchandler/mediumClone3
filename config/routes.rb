@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  
+
   get 'projects/new'
 
   get 'sessions/new'
   
   root to: 'pages#index'
-  resources :projects
+  
   get '/secret', to: 'pages#secret', as: :secret
   devise_for :users
 
