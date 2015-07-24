@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-  
+  root to: 'pages#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'projects/new'
-
-  get 'sessions/new'
   
-  root to: 'pages#index'
-  
+  # get 'sessions/new'
+  get '/south', to: 'pages#south', as: :south
+  get '/north', to: 'pages#north', as: :north
   get '/secret', to: 'pages#secret', as: :secret
   devise_for :users
 
