@@ -5,8 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable,
          :zxcvbnable
    
-         acts_as_messageable
-
-
 end
 
