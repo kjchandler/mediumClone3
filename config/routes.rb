@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'conversations/index'
   get 'south/index'
 
   get 'south/new'
