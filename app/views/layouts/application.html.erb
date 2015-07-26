@@ -27,6 +27,12 @@
         <li><%= link_to 'South',
         south_path %></li>
         <% end %>
+
+        <% if user_signed_in? %>
+        <li><%= link_to 'secret',
+        secret_path %></li>
+        <% end %>
+
       </ul>
 
       
@@ -69,9 +75,16 @@
 	<h1><%=yield :header %></h1>
   <%= yield %>
 </div>
+
+<div class="page-header">
+  <h1><%= yield :page_header %><h1>
+</div>
+
+
+
 <div id="footer">
   <div class="container">
-    <p class="text-muted">Info: <a href="http://www.middlesexcentre.on.ca" target="_blank">Middlesex Centre</a></p>
+    <p class="text-muted"><a href="http://www.middlesexcentre.on.ca" target="_blank">Middlesex Centre</a></p>
   </div>
 </div>
 
