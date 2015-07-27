@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   get 'south/index'
 
+<<<<<<< HEAD
   get 'south/new'
 
   get 'north/index'
+=======
+  
+>>>>>>> parent of 2fc0aac... Added links for North and South
 
   get 'north/new'
 
@@ -13,12 +17,21 @@ Rails.application.routes.draw do
   resources :articles
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+<<<<<<< HEAD
   # get 'sessions/new'
   #get /south means localhost/south for the request
   #this information is sent to the pages
   #controller and then to the south view or page
   get '/south', to: 'south#index', as: :south
   get '/north', to: 'north#index', as: :north
+=======
+  get 'projects/new'
+
+  get 'sessions/new'
+  
+  root to: 'pages#index'
+  
+>>>>>>> parent of 2fc0aac... Added links for North and South
   get '/secret', to: 'pages#secret', as: :secret
   devise_for :users
   get '/old', to: 'pages#old', as: :old
