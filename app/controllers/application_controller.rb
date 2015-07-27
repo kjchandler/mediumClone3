@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-
   # This allows for the name value to be whitelisted
   # the username should now show up when logged in. the
   # reason it didn't before was because rails defaults to 
