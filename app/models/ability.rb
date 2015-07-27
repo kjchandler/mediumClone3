@@ -2,16 +2,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-     #user ||= User.new # guest user (not logged in)
+    # user ||= User.new # guest user (not logged in)
     # if user.admin?
-     # can :manage, Post
-     #can :read, User
-     # can :manage, User, id: user.id
-     # can :read, ActiveAdmin::Page, name: "Dashboard",
-     # namespace_name: :admin
-  
+      # can :manage, :all
     # else
-    # can :read, :all
+      can :read, :all
     # end
     #
     # The first argument to `can` is the action you are giving the user
@@ -31,5 +26,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-    end
+  end
 end

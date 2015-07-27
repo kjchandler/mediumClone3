@@ -15,21 +15,18 @@
     <div id="navbar">
       <ul class="nav navbar-nav">
         <li><%= link_to 'Home', root_path %></li>
-        
-<!-- check for authenicatation others will be redirected to to the log in page -->
-        
+        <!-- check for authenicatation others will be redirected to to the log in page -->
         <% if user_signed_in? %>
-        <li><%= link_to 'North',
-        north_path %></li>
+          <li><%= link_to 'Secret', secret_path %></li>
         <% end %>
 
         <% if user_signed_in? %>
-        <li><%= link_to 'South',
-        south_path %></li>
+        <li><%= link_to 'secret',
+        secret_path %></li>
         <% end %>
+
       </ul>
 
-      
 
      <ul class="nav navbar-nav pull-right">
        <% if user_signed_in? %><!-- this is a Devise helper to tell you if a user is logged in -->
@@ -69,9 +66,20 @@
 	<h1><%=yield :header %></h1>
   <%= yield %>
 </div>
+
+<div class="page-header">
+  <h1><%= yield :page_header %><h1>
+</div>
+
+
+
 <div id="footer">
   <div class="container">
-    <p class="text-muted">Info: <a href="http://www.middlesexcentre.on.ca" target="_blank">Middlesex Centre</a></p>
+<<<<<<< HEAD
+    <p class="text-muted"><a href="http://www.middlesexcentre.on.ca" target="_blank">Middlesex Centre</a></p>
+=======
+    <p class="text-muted">Created by <a href="http://playmygolfball.com" target="_blank">Kelly Chandler</a></p>
+>>>>>>> parent of 2fc0aac... Added links for North and South
   </div>
 </div>
 
